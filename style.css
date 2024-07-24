@@ -1,0 +1,127 @@
+body{
+    background-image: url(images/backgroundphoto.jpg);
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-areas: "pic desc desc exp exp exp"
+                         "links links links exp exp exp"
+                         "links links links proj proj proj"
+                         "links links links proj proj proj";
+    grid-template-columns: 175px 175px 175px 175px 175px 175px;
+    grid-template-rows: 120px 100px 120px 100px;
+    justify-content: stretch;
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 10vh;
+    box-shadow: 0px 0px 20px 5px #88074796;
+    border-radius: 8px;
+    padding: 40px 10px 40px 10px;
+    background-color: black;
+}
+
+.box {
+    color: white;
+    /*border: 1px solid rgb(251, 255, 0); Grid-visualizer*/
+}
+
+img {
+    border: 4px solid white;
+    border-radius: 50%;
+    margin-top: 7px;
+}
+.pic {
+    grid-area: pic;
+    text-align: center;
+    max-width: 100%;
+}
+
+.desc {
+    grid-area: desc;
+    display: block;
+    text-align: left;
+    background-color: #ffffff33;
+    box-shadow: 5px 5px 6px 1px #1962ff6b;
+    border-radius: 20px;
+    margin-right: 50px;
+    padding-left:20px;
+    padding-right:10px;
+}
+
+.desc h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.desc p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.exp {
+    grid-area: exp;
+    display: block;
+    border-left: 1px solid #ffffff73;
+    border-top-left-radius: 8px;
+    padding-left: 50px;
+}
+
+.exp h1, h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.exp p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.links {
+    grid-area: links;
+
+}
+.proj {
+    grid-area: proj;
+    display: block;
+    border-left: 1px solid #ffffff73;
+    border-bottom-left-radius: 8px;
+}
+
+.proj h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    float: left;
+    padding-left: 50px;
+}
+.proj h2 {
+    color: #6200be;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+/*TABLET*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /*ACA HACES AJUSTES PARA TABLET*/
+  }
+  
+  /*MOBILE*/
+  
+  @media (max-width: 767px) {
+    /*ACA HACES AJUSTES PARA MOBILE*/
+  }
