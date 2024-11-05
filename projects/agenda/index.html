@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="STYLESHEET" href="layout.css">
+    <link rel="STYLESHEET" href="style.css">
+    <link rel="STYLESHEET" href="stylemain.css">
+    <link rel="STYLESHEET" href="stleftbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet">
+    <title>Agenda</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="box leftbar">
+            <h2 id="hleftbar">Barberos</h2>
+            <div class="barber-selection">
+                <div class="barber-option">
+                    <input type="radio" id="barber1" name="barber" value="Carlos" required>
+                    <label for="barber1">
+                        <img src="user.jpg" alt="Carlos">
+                        <span>Carlos</span>
+                    </label>
+                </div>
+                <div class="barber-option">
+                    <input type="radio" id="barber2" name="barber" value="Pedro" required>
+                    <label for="barber2">
+                        <img src="user.jpg" alt="Pedro">
+                        <span>Pedro</span>
+                    </label>
+                </div>
+                <div class="barber-option">
+                    <input type="radio" id="barber3" name="barber" value="Juan" required>
+                    <label for="barber3">
+                        <img src="user.jpg" alt="Juan">
+                        <span>Juan</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="box main">
+            <h2 id="hmain">Reservar Hora</h2>
+        <form id="reservaForm">
+            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+            <input type="tel" id="phone" name="phone" placeholder="Teléfono">
+            <input type="date" id="date" name="date" required>
+            <select id="time" name="time" required>
+                <option value="9:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+            </select>
+            <button id="reservebtn" type="submit">Reservar</button>
+        </form>
+        </div>
+        <div class="box rightbar">X</div>
+        <div class="box header">
+            <button> Inicio </button> <button> Reservar </button> <button> Nosotros </button>
+        </div>
+        <div class="box mainbar">X</div>
+        <div class="box undefined">X</div>
+    </div>
+</body>
+</html>
