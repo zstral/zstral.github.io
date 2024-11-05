@@ -1,7 +1,7 @@
 /* DESKTOP */
 body{
-    background-image: url(images/backgroundphoto.jpg);
-    background-color: rgb(0, 0, 0);
+    background-image: url(images/backgroundphotow.jpg);
+    background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -11,23 +11,60 @@ body{
     grid-template-areas: "pic desc desc exp exp exp"
                          "links links links exp exp exp"
                          "links links links proj proj proj"
-                         "links links links proj proj proj"
-                         "effect effect effect proj proj proj";
+                         "rrss rrss rrss proj proj proj"
+                         "footer footer footer proj proj proj";
     grid-template-columns: 175px 175px 175px 175px 175px 175px;
-    grid-template-rows: 120px 100px 120px 50px 50px;
+    grid-template-rows: 120px 100px 110px 40px 50px;
     justify-content: stretch;
     width: 1050px;
+    padding: 40px 10px 40px 10px;
     margin: 0 auto;
     margin-top: 10vh;
-    box-shadow: 0px 0px 20px 5px #88074796;
-    border-radius: 8px;
-    padding: 40px 10px 40px 10px;
+    border-radius: 10px;
     background-color: black;
+    box-shadow: 0px 0px 30px 10px #363636a1;
+    
+    /*--Border Glow Effect Start--*/
+    --border-width: 5px;
+  
+    position: relative;
+  
+    &::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(100% + var(--border-width) * 2);
+      height: calc(100% + var(--border-width) * 2);
+      background: linear-gradient(
+        60deg,
+        #0e1b95,
+        #6303c9,
+        #e109af,
+        #00ffbf,
+        #ff7070,
+        #44fd91,
+        #2a1ddd,
+        #e000bb
+      );
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: 10px;
+      animation: moveGradient 5s alternate infinite;
+    }
+    /*--Border Glow Effect End--*/
 }
+
+@keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+}
+
 
 .box {
     color: white;
-    /* border: 1px solid rgb(251, 255, 0); Grid-Visualizer */
 }
 
 .pic {
@@ -37,15 +74,17 @@ body{
     text-align: center;
     border: 4px solid white;
     border-radius: 50%;
-    margin: 10px 38px ;
+    margin: 10px 38px;
 }
 
 .desc {
     grid-area: desc;
     display: block;
     text-align: left;
-    background-color: #ffffff33;
-    box-shadow: 5px 5px 6px 1px #1962ff6b;
+    background-color: #212121;
+    box-shadow: 5px 10px 10px 1px rgb(25, 25, 25),
+             -5px -4px 15px 1px rgb(60, 60, 60);
+    border: 1px solid rgb(36, 36, 36);
     border-radius: 20px;
     margin-right: 50px;
     padding-left:20px;
@@ -87,15 +126,32 @@ body{
     font-style: normal;
     font-size: 13px;
 }
-
-img1 {
-    background-color: aqua;
+.exp a {
+    display: flex;
+    float: left;
 }
 
-.links {
-    grid-area: links;
+#uxuimg {
+    border: none;
+    border-radius: 10%;
+    padding: 2px 4px 0px 4px;
 }
 
+#btnArrow {
+    visibility: hidden;
+    color: #ffffff;
+    font-size: 25px;
+    width: 35px;
+    margin-top: 22px;
+    display: block;
+    border-color: transparent;
+    border-radius: 50%;
+    background-color:#494949;
+}
+
+#btnArrow:hover {
+    background-color: #6200be;
+}
 
 .proj {
     grid-area: proj;
@@ -120,54 +176,144 @@ img1 {
     font-size: 25px;
 }
 
-.proj p1 {
-    display: block;
-    margin: 0px 50px 0px 50px;
-    border: 1px solid white;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    background-color: rgb(122, 122, 122);
-}
-
-.proj p2, p3 {
-    display: block;
-    margin: 0px 50px 0px 50px;
-    border: 1px solid white;
-    background-color: rgb(122, 122, 122);
-}
-
-.proj p4 {
-    display: block;
-    margin: 0px 50px 0px 50px;
-    border: 1px solid white;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    background-color: rgb(122, 122, 122);
-}
-
-.effect {
-    grid-area: effect;
+.project {
     display: flex;
-    overflow: hidden;
-    mask-image: linear-gradient(to right, transparent 1%, white 30%, white 70%, transparent 100%);
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 30px;
+    border: 1px solid rgb(51, 51, 51);
+    background-color: #212121;
+    border-radius: 20px;
+    margin: 10px 50px 0px 50px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
-.efecto {
-    color: white;
+.project:hover {
+    background-color: #6200be;
+}
+
+#codeicon img{
+    margin-top: 15px;
+}
+
+.project img {
+    margin-top: 7px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.nameproj {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 15px;
-    animation: effect 5s linear infinite;
+    font-size: 13px;
+    color: white;
+    display: flex;
+    float: right;
+    margin: 15px 10px;
+    border-radius: 5px;
 }
 
-@keyframes effect {
-    to {
-        transform: translateX(-50%);
+.spinner {
+    display: flex;
+    margin: 15px 10px;
+    width: 15px;
+    height: 15px;
+    --clr: rgb(255, 255, 255);
+    --clr-alpha: rgba(232, 241, 241, 0.1);
+    animation: spinner 1.6s infinite ease;
+    transform-style: preserve-3d;
+  }
+  
+  .spinner > div {
+    background-color: var(--clr-alpha);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 1px solid var(--clr);
+  }
+  
+  .spinner div:nth-of-type(1) {
+    transform: translateZ(-9px) rotateY(180deg);
+  }
+  
+  .spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+  }
+  
+  .spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+  }
+  
+  .spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+  }
+  
+  .spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+  }
+  
+  .spinner div:nth-of-type(6) {
+    transform: translateZ(9px);
+  }
+  
+  @keyframes spinner {
+    0% {
+      transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
     }
+  
+    50% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+  
+    100% {
+      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+  }
+
+.links {
+    color: #ffffff;
+    grid-area: links;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.rrss {
+    grid-area: rrss;
+    display: flex;
+    justify-content: center;
+    margin: 0px 25px 0px 40px;
+    column-gap: 60px;
+}
+
+#iconHover {
+    border-radius: 50%;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+#iconHover:hover {
+    background-color: #d9ff00;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.footer {
+    color: rgba(255, 255, 255, 0.404);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
 }
 
 /*TABLET*/
@@ -201,16 +347,15 @@ img1 {
         justify-content: stretch;
         height: auto;
         width: auto;
-        margin: 20px 5px 20px 5px;
-        box-shadow: 0px 0px 20px 1px #88074796;
-        border-radius: 15px;
         padding: 20px 10px 40px 10px;
+        margin: 20px 5px 20px 5px;
+        border-radius: 10px;
         background-color: black;
+        box-shadow: 0px 0px 20px 1px #88074796;
     }
     
     .box {
         color: white;
-        jhborder: 1px solid rgb(251, 255, 0);
     }
 
     .pic {
@@ -281,10 +426,6 @@ img1 {
         font-weight: 300;
         font-style: normal;
         font-size: 12px;
-    }
-    
-    .links {
-        grid-area: links;
     }
     
     .proj {
