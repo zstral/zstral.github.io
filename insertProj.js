@@ -16,6 +16,15 @@ const projects = [
         name: "CRUD Items (ASP.NET Core + SQLite)",
         target: "_blank",
         spinner: false
+    },
+
+    {
+        link: "projects/SafePass/index.html",
+        imgSrc: "images/assets/js.png",
+        imgAlt: "SafePass Project Icon",
+        name: "SafePass (Generador de Contraseñas)",
+        target: "_blank",
+        spinner: false
     }
 ];
 

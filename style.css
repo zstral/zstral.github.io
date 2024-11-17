@@ -320,187 +320,118 @@ body{
 @media (min-width: 768px) and (max-width: 1024px) {
   }
   
-  /*MOBILE*/
-@media (max-width: 767px) {
+/*MOBILE*/
+@media screen and (max-width: 768px) {
+body {
+    background-image: url(images/backgroundphotow_mobile.jpg);
+    background-size: cover;
+}
 
-    body {
-        background-image: url(images/backgroundphoto_mobile.jpg);
-        background-color: rgb(0, 0, 0);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    
-    .grid-box {
-        display: grid;
-        grid-template-areas: "pic desc desc"
-                             "exp exp exp"
-                             "exp exp exp"
-                             "proj proj proj"
-                             "proj proj proj"
-                             "proj proj proj"
-                             "links links links"
-                             "links links links"
-                             "links links links"
-                             "effect effect effect";
-        grid-template-columns: 80px 175px 110px;
-        grid-template-rows: 130px 100px 100px 70px 70px 70px 70px 70px 70px 50px;
-        justify-content: stretch;
-        height: auto;
-        width: auto;
-        padding: 20px 10px 40px 10px;
-        margin: 20px 5px 20px 5px;
-        border-radius: 10px;
-        background-color: black;
-        box-shadow: 0px 0px 20px 1px #88074796;
-    }
-    
-    .box {
-        color: white;
-    }
+.grid-box {
+    grid-template-areas:
+        "pic"
+        "desc"
+        "links"
+        "exp"
+        "proj"
+        "rrss"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 90%;
+    padding: 20px 10px;
+    margin-top: 5vh;
+    border-radius: 10px;
+}
 
-    .pic {
-        grid-area: pic;
-        display: block;
-        text-align: center;
-        border: 3px solid white;
-        border-radius: 50%;
-        margin: 25px 0px ;
-    }
-    
-    .pic img {
-        width: 100%;
-        height: 100%;
-    }
+.pic {
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+}
 
-    .desc {
-        grid-area: desc;
-        display: block;
-        text-align: left;
-        background-color: #ffffff33;
-        box-shadow: 5px 5px 6px 1px #1962ff6b;
-        border-radius: 20px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 10px;
-        margin-bottom: 18px;
-        padding-left: 15px;
-        padding-right: 10px;
-    }
-    
-    .desc h1 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-    }
-    
-    .desc p {
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 12px;
-    }
-    
-    .exp {
-        grid-area: exp;
-        display: block;
-        margin: 10px 30px;
-        border-top: 1px solid #ffffff73;
-        border-bottom: 1px solid #ffffff73;
-        border-top-right-radius: 8px;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-        border-left: transparent;
-        padding-left: 10px;
-    }
-    
-    .exp h1, h2 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-    }
-    
-    .exp p {
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 12px;
-    }
-    
-    .proj {
-        grid-area: proj;
-        display: block;
-        border-left: transparent;
-    }
-    
-    .proj h1 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-        float: left;
-        padding-left: 40px;
-    }
-    .proj h2 {
-        color: #6200be;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 20px;
-    }
-    
-    .proj p1 {
-        display: block;
-        padding-top: 20px;
-        margin: 0px 30px 0px 30px;
-        border: 1px solid white;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        background-color: rgb(122, 122, 122);
-    }
-    
-    .proj p2, p3 {
-        display: block;
-        padding-top: 20px;
-        margin: 0px 30px 0px 30px;
-        border: 1px solid white;
-        background-color: rgb(122, 122, 122);
-    }
-    
-    .proj p4 {
-        display: block;
-        padding-top: 20px;
-        margin: 0px 30px 0px 30px;
-        border: 1px solid white;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-        background-color: rgb(122, 122, 122);
-    }
+.pic img {
+    width: 120px;
+    height: 120px;
+}
 
-    .effect {
-        grid-area: effect;
-        display: flex;
-        overflow: hidden;
-        mask-image: linear-gradient(to right, transparent 1%, white 30%, white 70%, transparent 100%);
-        margin-left: 50px;
-        margin-right: 50px;
-        margin-top: 30px;
-    }
-    
-    .efecto {
-        color: white;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 12px;
-        animation: effect 5s linear infinite;
-    }
-    
-    @keyframes effect {
-        to {
-            transform: translateX(-50%);
-        }
-    }
+.desc {
+    text-align: center;
+    margin: 25px auto;
+    padding: 0px 50px 5px 50px;
+}
 
-  }
+.desc h1 {
+    font-size: 20px;
+}
+
+.desc p {
+    font-size: 12px;
+}
+
+.exp {
+    text-align: center;
+    padding-left: 1px;
+    border-left: none;
+}
+
+.exp h1, .exp h2, .proj h1, .proj h2 {
+    font-size: 18px;
+}
+
+.exp h2 {
+    padding: 10px 0px 0px 10px;
+}
+
+.exp p, .proj .nameproj {
+    font-size: 12px;
+}
+
+.cert {
+    justify-self: center;
+}
+
+.proj {
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 10px;
+    border-left: none;
+}
+
+.proj h1 {
+    font-size: 20px;
+    margin-top: 21px;
+    text-align: center;
+}
+
+.project h1 {
+    text-align: left;
+}
+
+.project img {
+    width: 25px;
+    height: 25px;
+}
+
+.nameproj {
+    display: flex;
+}
+
+.links, .rrss, .footer {
+    margin: 10px auto;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rrss {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+}
+}

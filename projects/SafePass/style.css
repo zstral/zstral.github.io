@@ -1,0 +1,81 @@
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #212121;
+  color: white;
+}
+
+.container {
+  background-color: #2121216e;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  border: rgb(26, 26, 26) 1px solid;
+  border-radius: 30px;
+  backdrop-filter: blur(30px);
+  box-shadow: 15px 10px 30px rgb(24, 24, 24),
+             -15px -15px 30px rgb(24, 24, 24);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  color: rgba(255, 255, 255, 0.521);
+  font-size: 12px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #006b59;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+button:hover {
+  background-color: #00fcda;
+}
+
+#a {
+  color:  rgba(255, 255, 255, 0.212);
+  font-size: 13px;
+}
+
+input#password {
+  border: #00f4fc solid 2px;
+  color: white;
+  background-color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
