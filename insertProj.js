@@ -1,10 +1,9 @@
-
 const projects = [
     {
-        link: "projects/agenda/index.html",
-        imgSrc: "images/assets/css.png",
-        imgAlt: "Agenda Project Icon",
-        name: "WebApp de Agendamiento (En Pausa)",
+        link: "null",
+        imgSrc: "images/assets/js.png",
+        imgAlt: "Landing Page - WLMxWhatsapp",
+        name: "Landing Page - WLMxWhatsapp",
         target: "_blank",
         spinner: true
     },
