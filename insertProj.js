@@ -1,6 +1,6 @@
 const projects = [
     {
-        link: "null",
+        link: "https://ltunix.github.io/WLMxWhatsapp/index.html",
         imgSrc: "images/assets/js.png",
         imgAlt: "Landing Page - WLMxWhatsapp",
         name: "Landing Page - WLMxWhatsapp",
